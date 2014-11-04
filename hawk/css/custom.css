@@ -78,5 +78,30 @@ body {
 }
 
 
-#2b2b2b
+
+.content {
+	margin-top:20px;
+	padding-left: 30px;
+}
+
+.data {
+	padding:10px;
+	border-radius: 8px;
+	background: #2b2b2b;
+	color: #fff;
+}
+
+.circle {
+	border-radius: 100%;
+	border: solid 4px #fff;
+	background: #80c235;
+	color: #fff;
+	font-size: 30px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	padding-top: 25px;
+	margin-left:4em;
+
+}
 

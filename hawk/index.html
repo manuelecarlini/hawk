@@ -79,20 +79,64 @@
       </li>
     </ul>
   </div>
+  <div class="col-md-10 content">
+    <div class="col-md-2 data">
+      dsss
+    </div>
 
-  <div class="col-md-10 col-xs-9">
-        <ul class="nav nav-tabs" role="tablist" id="myTab">
-          <li role="presentation" class="active"><a href="#">Home</a></li>
-          <li role="presentation"><a href="#">Profile</a></li>
-          <li role="presentation"><a href="#">Messages</a></li>
-        </ul>
-  </div>
+    <div class="col-md-3">
+      <div class="circle">OK</div>
+    </div>
+
+    <div class="col-md-3">
+      dsds
+    </div>
+  </div> <!-- close col 10 --> 
+
+<div class="col-md-10">
+
+    <ul id="tabs" class="nav nav-tabs " data-tabs="tabs">
+        <li class="active"><a href="#red" data-toggle="tab">Red</a></li>
+        <li><a href="#orange" data-toggle="tab">Orange</a></li>
+        <li><a href="#yellow" data-toggle="tab">Yellow</a></li>
+        <li><a href="#green" data-toggle="tab">Green</a></li>
+        <li><a href="#blue" data-toggle="tab">Blue</a></li>
+    </ul>
+    <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane active" id="red">
+            <h1>Red</h1>
+            <p>red red red red red red</p>
+        </div>
+        <div class="tab-pane" id="orange">
+            <h1>Orange</h1>
+            <p>orange orange orange orange orange</p>
+        </div>
+        <div class="tab-pane" id="yellow">
+            <h1>Yellow</h1>
+            <p>yellow yellow yellow yellow yellow</p>
+        </div>
+        <div class="tab-pane" id="green">
+            <h1>Green</h1>
+            <p>green green green green green</p>
+        </div>
+        <div class="tab-pane" id="blue">
+            <h1>Blue</h1>
+            <p>blue blue blue blue blue</p>
+        </div>
+    </div>
+</div> <!-- close col 10 -->
+ 
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+</script>  
 
 </div>
 
  <!-- space for footer -->
   <div class="row navbar-fixed-bottom" id="footer">
-      <div class="col-md-10">
+      <div class="col-md-11">
         <ul class="list-inline footer-links">
           <li>
               © 2014 SUSE 
@@ -108,7 +152,7 @@
           </li> 
         </ul>  
       </div>
-      <div class="col-md-2">
+      <div class="col-md-1">
         <div class="logo-br"></div>
       </div>
   <div class="bottom-line navbar-fixed-bottom"></div>
@@ -119,6 +163,8 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+
 
 
 
