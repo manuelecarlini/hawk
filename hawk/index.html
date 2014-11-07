@@ -8,6 +8,7 @@
     <meta name="description" content="A user interface got High Availability">
     <meta name="keywords" content="linux,suse,suse linux, ">
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
     <link href="css/custom.css" rel="stylesheet" />
     <link href="css/fixed-positioning.css" rel="stylesheet" type="text/css" />
     <link href="favicon.png" rel="shortcut icon" />
@@ -18,24 +19,25 @@
     <![endif]-->
   </head>
   <body>
-<div class="container-fluid"> 
-  <div class="row header">
-    <div class="col-md-4">
-    <img src="images/logo.png">
-    </div>
+<div class="containr-fluid">
+<header>
+	<div class="row header">
+		<div class="col-md-4">
+			<img src="images/logo.png">
+		</div>
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4 rigth-top">
+			 admin<icon class="fa fa-sign-out">
+		</div>
+	</div>
+</header>
 
-     <div class="col-md-4">
-    --------
-    </div>
-
-     <div class="col-md-4 rigth-top">
-    logout
-    </div>
-  </div>
 
 <div class="row">
-  <div class="col-md-2 col-xs-3 menu">
-    <ul>
+	<div class="col-md-2 menu">
+		<aside>
+			<ul>
       <li class="active-test">
         Dashboard
       </li>
@@ -78,98 +80,244 @@
         Simulation
       </li>
     </ul>
+		</aside>
+	</div>
+
+	<div class="col-md-10">
+		<section class="content">
+		 <div class="dashboard"> <i class="fa fa-dashboard fa-lg dash"></i>Dashboard</div>
+			<div class="row">
+				<div class="col-md-4 data">
+					<dl class="dl-horizontal status">
+					  <dt>Stonit enable</dt>
+					  <dd>Yes</dd>
+					  <dt>No quorum Policy</dt>
+					  <dd>Ignore</dd>
+					  <dt>Simmetric Cluster</dt>
+					  <dd>True</dd>
+					  <dt>Resources stickness</dt>
+					  <dd>1</dd>
+					</dl>
+
+					<!-- old elements
+					<div class="row">
+						<div class="col-md-12 data">
+					      <div class="col-sm-9">
+					        Stonit enable
+					      </div>
+					      <div class="col-sm-3">
+					        Yes
+					      </div>
+					      <div class="col-sm-9">
+					        No quorum Policy
+					      </div>
+					      <div class="col-sm-3">
+					        Ignore
+					      </div>
+					      <div class="col-sm-9">
+					        Simmetric Cluster
+					      </div>
+					      <div class="col-sm-3">
+					        True
+					      </div>
+					      <div class="col-sm-9">
+					        Resources stickness
+					      </div>
+					      <div class="col-sm-3">
+					        1
+					      </div>
+					    </div>
+					</div>
+
+					-->
+
+				</div>
+				<div class="col-md-4">
+					 <div class="circle">OK</div>
+				</div>
+				<div class="col-md-4 messages">
+					      <div class="alert alert-danger alert-dismissible fade in">Error message <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">x</span> <span class="sr-only">Close</span></button> </div>
+
+					      <div class="alert alert-warning alert-dismissible fade in">warning message <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">x</span> <span class="sr-only">Close</span></button> </div>
+
+					      <div class="alert alert-success alert-dismissible fade in">positive message <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">x</span> <span class="sr-only">Close</span></button> </div>
+
+					      <div class="alert alert-info alert-dismissible fade in">info message <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">x</span> <span class="sr-only">Close</span></button> </div>
+				</div>
+			</div> <!-- finish row -->
+
+	  <!-- Nav tabs -->
+      <ul class="nav nav-tabs home-hawk" role="tablist">
+        <li role="presentation" class="active"><a href="#resources" role="tab" data-toggle="tab">Resources</a></li>
+        <li role="presentation"><a href="#node" role="tab" data-toggle="tab">Node</a></li>
+        <li role="presentation"><a href="#dependency" role="tab" data-toggle="tab">Dependercy</a></li>
+      </ul>
+
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="resources">
+         <div class="col-lg-12">
+          <div class="panel panel-default">
+          	<!-- header resources -->
+				 <input type="text" class="form-control search-res" placeholder="filter by name">
+				      <div class="select-resources">
+				       <select class="selectpicker ">
+				          <option>25</option>
+				          <option>50</option>
+				          <option>100</option>
+				        </select>
+				        <span class="rpp">results per page</span>
+				      </div>
+			<!-- stop header resources -->
+
+	<div class="panel-body">
+	 <table class="table table-condensed table-striped" style="border-collapse:collapse;">
+	    <thead>
+	        <tr><th>Status</th>
+	            <th>Name</th>
+	            <th>Type</th>
+	            <th>Nodes</th>
+	            <th>Operation</th>
+	        </tr>
+	    </thead>
+
+	    <tbody>
+		                  <tr data-toggle="collapse" data-target="#panel1" class="accordion-toggle">
+		                      <td><div class="red-circle"></div></td>
+		                      <td>WEB_SUSE.com</td>
+		                      <td>Group</td>
+		                      <td>A</td>
+		                      <td><icon class="fa fa-arrows-v fa-2x"><icon class="fa fa-play"> <icon class="fa fa-pencil"> <icon class="fa fa-cogs"></td>
+		                  </tr>
+		                  <tr>
+		                  	<td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="panel1"> 
+		                  		<div class="row">
+		                  		  <div class="col-md-4">
+							            <dl class="dl-horizontal inside-table">
+							            <div class="table-name">Parameter <icon class="fa fa-pencil icon-r"></div>
+										  <dt>Autoset_utilization_hv_memory</dt>
+										  <dd>False</dd>
+										  <dt>force_stop</dt>
+										  <dd>true</dd>
+										  <dt>hypervisor</dt>
+										  <dd>qemu:///system</dd>
+										  <dt>mistration_transort</dt>
+										  <dd>ssh</dd>
+										  <dt>autoset_utilization_cpu</dt>
+										  <dd>false</dd>
+										</dl>
+								 </div>
+
+								<div class="col-md-4">
+										<dl class="dl-horizontal inside-table">
+										  <div class="table-name">Operation  <icon class="fa fa-pencil icon-r"></div>
+										  <dt>monitor interval</dt>
+										  <dd>60</dd>
+										  <dt>timeout</dt>
+										  <dd>30</dd>
+										  <dt>Start timeout</dt>
+										  <dd>20</dd>
+										  <dt>stop timeout</dt>
+										  <dd>30</dd>
+										</dl>
+								</div>
+
+								<div class="col-md-4">
+										<dl class="dl-horizontal inside-table">
+										  <div class="table-name">Contraint <icon class="fa fa-pencil icon-r"></div>
+										  <dt>COLLOCATION</dt>
+										  <dt>clusterfs-manu-with-base</dt>
+										  <dt>INFINITY</dt>
+										  <dt>ORDER</dt>
+										  <dd>clusterfs-manu-with-base</dd>
+										  <dt>INFINITY</dt>
+									    </dl>
+								</div>
+
+		                  	   </div><!-- close row -->
+                 		    </td>
+                 		  </tr>
+		</tbody>
+
+		 <tbody>
+		                  <tr data-toggle="collapse" data-target="#panel2" class="accordion-toggle">
+		                      <td><div class="orange-circle"></div></td>
+		                      <td>WEB_SUSE.com</td>
+		                      <td>Group</td>
+		                      <td>A</td>
+		                      <td><icon class="fa fa-arrows-v fa-2x"><icon class="fa fa-stop"> <icon class="fa fa-pencil"> <icon class="fa fa-cogs"></td>
+		                  </tr>
+		                  <tr>
+		                  	<td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="panel2"> content
+                 		    </td>
+                 		  </tr>
+		</tbody>
+
+		 <tbody>
+		                  <tr data-toggle="collapse" data-target="#panel3" class="accordion-toggle">
+		                      <td><div class="green-circle"></div></td>
+		                      <td>WEB_SUSE.com</td>
+		                      <td>Group</td>
+		                      <td>A</td>
+		                      <td><icon class="fa fa-arrows-v fa-2x"><icon class="fa fa-stop"> <icon class="fa fa-pencil"> <icon class="fa fa-cogs"></td>
+		                  </tr>
+		                  <tr>
+		                  	<td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="panel3"> content
+                 		    </td>
+                 		  </tr>
+		</tbody>
+	</table>
+	</div>
+	 </div>
+	  </div>
+		</div>
+
+        <div role="tabpanel" class="tab-pane" id="node">..ree.</div>
+        <div role="tabpanel" class="tab-pane" id="dependency">..rerq.</div>
+
+
+
+
+
+		</section>
+	</div>
+
+
+
+</div><!-- close container -->
+
+
+	 <!-- space for footer -->
+<footer class=" navbar-fixed-bottom footer">
+	<div class="row">
+    <div class="col-md-11">
+      <ul class="list-inline footer-links">
+        <li>
+            © 2014 SUSE 
+        </li>
+        <li>
+            <a href="#">Legal </a>
+        </li>
+        <li>
+            <a href="#">About </a>
+        </li>
+        <li>
+            <a href="#">Contact </a>
+        </li> 
+      </ul>  
+    </div>
+    <div class="col-md-1">
+      <div class="logo-br"></div>
+    </div>
   </div>
-  <div class="col-md-10 content">
-    <div class="col-md-2 data">
-      dsss
-    </div>
-
-    <div class="col-md-3">
-      <div class="circle">OK</div>
-    </div>
-
-    <div class="col-md-3">
-      dsds
-    </div>
-  </div> <!-- close col 10 --> 
-
-<div class="col-md-10">
-
-    <ul id="tabs" class="nav nav-tabs " data-tabs="tabs">
-        <li class="active"><a href="#red" data-toggle="tab">Red</a></li>
-        <li><a href="#orange" data-toggle="tab">Orange</a></li>
-        <li><a href="#yellow" data-toggle="tab">Yellow</a></li>
-        <li><a href="#green" data-toggle="tab">Green</a></li>
-        <li><a href="#blue" data-toggle="tab">Blue</a></li>
-    </ul>
-    <div id="my-tab-content" class="tab-content">
-        <div class="tab-pane active" id="red">
-            <h1>Red</h1>
-            <p>red red red red red red</p>
-        </div>
-        <div class="tab-pane" id="orange">
-            <h1>Orange</h1>
-            <p>orange orange orange orange orange</p>
-        </div>
-        <div class="tab-pane" id="yellow">
-            <h1>Yellow</h1>
-            <p>yellow yellow yellow yellow yellow</p>
-        </div>
-        <div class="tab-pane" id="green">
-            <h1>Green</h1>
-            <p>green green green green green</p>
-        </div>
-        <div class="tab-pane" id="blue">
-            <h1>Blue</h1>
-            <p>blue blue blue blue blue</p>
-        </div>
-    </div>
-</div> <!-- close col 10 -->
- 
-<script type="text/javascript">
-    jQuery(document).ready(function ($) {
-        $('#tabs').tab();
-    });
-</script>  
-
-</div>
-
- <!-- space for footer -->
-  <div class="row navbar-fixed-bottom" id="footer">
-      <div class="col-md-11">
-        <ul class="list-inline footer-links">
-          <li>
-              © 2014 SUSE 
-          </li>
-          <li>
-              <a href="#">Legal </a>
-          </li>
-          <li>
-              <a href="#">About </a>
-          </li>
-          <li>
-              <a href="#">Contact </a>
-          </li> 
-        </ul>  
-      </div>
-      <div class="col-md-1">
-        <div class="logo-br"></div>
-      </div>
-  <div class="bottom-line navbar-fixed-bottom"></div>
-</div>
-
+  <div class="bottom-line footer"></div>
+</footer>
 
     <!--====== JQuery Libraries ========== -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
-
-
-
-
-
-</div>
 
 </body>
 </html>
