@@ -10,7 +10,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/font-awesome.min.css" rel="stylesheet"/>
     <link href="css/custom.css" rel="stylesheet" />
-    <link href="css/fixed-positioning.css" rel="stylesheet" type="text/css" />
     <link href="favicon.png" rel="shortcut icon" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -19,7 +18,7 @@
     <![endif]-->
   </head>
   <body>
-<div class="containr-fluid">
+<div class="container-fluid">
 <header>
 	<div class="row header">
 		<div class="col-md-4">
@@ -164,27 +163,29 @@
 	<div class="panel-body">
 	 <table class="table table-condensed table-striped" style="border-collapse:collapse;">
 	    <thead>
-	        <tr>
-	        	  <th>Status</th>
-	            <th>Name</th>
-	            <th>Type</th>
-	            <th>Nodes</th>
-	            <th>Operation</th>
-	        </tr>
+	      <tr>
+	    	  <th>Status</th>
+	        <th>Name</th>
+	        <th>Type</th>
+	        <th>Nodes</th>
+	        <th>Operation</th>
+	      </tr>
 	    </thead>
 
-	    <tbody>
-		                  <tr data-toggle="collapse" data-target="#panel1" class="accordion-toggle">
-		                      <td><div class="red-circle"></div></td>
-		                      <td>WEB_SUSE.com</td>
-		                      <td>Group</td>
-		                      <td>A</td>
-		                      <td><icon class="fa fa-arrows-v fa-1x"><icon class="fa fa-play"> <icon class="fa fa-pencil"> <icon class="fa fa-cogs"></td>
-		                  </tr>
-		                  <tr>
-		                  	<td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="panel1"> 
-		                  		<div class="row">
-		                  		  <div class="col-md-4">
+	<tbody>
+        <tr data-toggle="collapse" data-target="#panel1" class="accordion-toggle">
+            <td><div class="red-circle"></div></td>
+            <td>WEB_SUSE.com</td>
+            <td>Group</td>
+            <td>A</td>
+            <td><icon class="fa fa-arrows-v fa-1x"><icon class="fa fa-play"> <icon class="fa fa-pencil"> <icon class="fa fa-cogs"></td>
+        </tr>
+<tr>
+ <td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="panel1"> 
+<div class="row">
+
+
+		  <div class="col-md-4">
 		   <div class="top-title">Paramenter  <icon class="fa fa-pencil icon-r"></div>
 				<table class="table-striped status data">
 					<tbody>
@@ -208,15 +209,13 @@
 							<td>autoset_utilization_cpu</td>
 							<td>false</td>
 						</tr>
-
 					</tbody>
-
 				</table>
 					<div class="card-bottom"></div>
-				</div>
+			</div><!-- close col 4 -->
 
 			<div class="col-md-4">
-			 <div class="top-title">Operation  <icon class="fa fa-pencil icon-r"></div>
+			 <div class="top-title">Operation<icon class="fa fa-pencil icon-r"></div>
 				<table class="table-striped status data">
 					<tbody>
 						<tr>
@@ -236,13 +235,12 @@
 							<td>20</td>
 						</tr>
 					</tbody>
-
 				</table>
 					<div class="card-bottom"></div>
-				</div>
+			</div><!-- close col 4 -->
 
-								<div class="col-md-4">
-			 <div class="top-title">Contraint  <icon class="fa fa-pencil icon-r"></div>
+			<div class="col-md-4">
+			 <div class="top-title">Contraint<icon class="fa fa-pencil icon-r"></div>
 				<table class="table-striped status data">
 					<tbody>
 						<tr>
@@ -262,19 +260,17 @@
 							<td>20</td>
 						</tr>
 					</tbody>
-
 				</table>
 					<div class="card-bottom"></div>
+			</div><!-- close col 4 -->
 
 
-								</div>
+</div><!-- close row -->
+ </td>
+</tr>
+	</tbody>
 
-		                  	   </div><!-- close row -->
-                 		    </td>
-                 		  </tr>
-		</tbody>
-
-		 <tbody>
+		 								<tbody>
 		                  <tr data-toggle="collapse" data-target="#panel2" class="accordion-toggle">
 		                      <td><div class="orange-circle"></div></td>
 		                      <td>WEB_SUSE.com</td>
@@ -283,12 +279,12 @@
 		                      <td><icon class="fa fa-arrows-v fa-1x"><icon class="fa fa-stop"> <icon class="fa fa-pencil"> <icon class="fa fa-cogs"></td>
 		                  </tr>
 		                  <tr>
-		                  	<td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="panel2"> content
+		                  	<td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="panel2"> content</div>
                  		    </td>
                  		  </tr>
-		</tbody>
+										</tbody>
 
-		 <tbody>
+									  <tbody>
 		                  <tr data-toggle="collapse" data-target="#panel3" class="accordion-toggle">
 		                      <td><div class="green-circle"></div></td>
 		                      <td>WEB_SUSE.com</td>
@@ -297,24 +293,49 @@
 		                      <td><icon class="fa fa-arrows-v fa-1x"><icon class="fa fa-stop"> <icon class="fa fa-pencil"> <icon class="fa fa-cogs"></td>
 		                  </tr>
 		                  <tr>
-		                  	<td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="panel3"> content
-                 		    </td>
+		                  	<td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="panel3"> content</div>
+                 		  </td>
                  		  </tr>
-		</tbody>
-	</table>
+										</tbody>
+	 </table>
 	</div>
 	 </div>
 	  </div>
-		</div>
+		 </div>
 
         <div role="tabpanel" class="tab-pane" id="node">..ree.</div>
         <div role="tabpanel" class="tab-pane" id="dependency">..rerq.</div>
 
-
-
-
-
+</div>
 		</section>
+
+  <!-- Footer -->
+  <footer class=" navbar-fixed-bottom footer">
+  <div class="row">
+    <div class="col-md-11">
+      <ul class="list-inline footer-links">
+        <li>
+            © 2014 SUSE 
+        </li>
+        <li>
+            <a href="#">Legal </a>
+        </li>
+        <li>
+            <a href="#">About </a>
+        </li>
+        <li>
+            <a href="#">Contact </a>
+        </li> 
+      </ul>  
+  </div>
+
+    <div class="col-md-1">
+      <div class="logo-br"></div>
+    </div>
+  </div>
+  <div class="bottom-line navbar-fixed-bottom"></div>
+  </footer>
+      
 	</div>
 
 
