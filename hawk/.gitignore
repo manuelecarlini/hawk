@@ -7,7 +7,6 @@
 # Ignore useless dirs
 /log/*
 /tmp/*
-/vendor/*
 
 # Ignore Gemfile.lock
 Gemfile.lock
